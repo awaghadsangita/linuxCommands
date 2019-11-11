@@ -43,4 +43,8 @@ totalSalary="$( calDailyWage $totalWorkHours )"
 wage[TotalSalary]=$totalSalary
 echo "Daily Earnings"  ${wage[@]}
 echo "Day" ${!wage[@]}
-
+for (( day=1; day<totalWorkingDays; day++ ))
+do
+	echo "day: "$day ${wage[$day]}  
+done
+echo "TotalSalary" ${wage[TotalSalary]}
