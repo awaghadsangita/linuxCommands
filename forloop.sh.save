@@ -1,0 +1,15 @@
+!/bin/bash  -x
+for file in `ls *.txt`
+do
+	folderName=`echo $file | awk -F. '{print $1}'`;
+	if [ -d $foldeName ];
+	then
+	rm -R $folderName;
+	fi
+	date=date+"%m-%d-%y";
+	echo $date; 
+	mkdir $folderName;
+	#echo foler Created $folderName;
+	cp $newfileName $folderName;
+
+done
